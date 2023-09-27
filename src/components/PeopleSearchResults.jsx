@@ -3,13 +3,12 @@ import {getApiKey, getData, theMovieDBPeopleSearchPrefix} from "../utils/dbUtils
 import {useQuery} from "react-query";
 import {ContentPagination} from "./ContentPagination.jsx";
 import {PeopleSearchDetails} from "./PeopleSearchDetails.jsx";
-
 export const PeopleSearchResults = ({searchText}) => {
     const [page, setPage] = useState(1)
     const urlSearch = `${theMovieDBPeopleSearchPrefix}?api_key=${getApiKey()}&query=${searchText}&page=${page}`
     const {data, status} = useQuery(['searchedItems', urlSearch], getData)
     return (
-        <div className="content">
+        <div className="content" id='PeopleSearchResult'>
             {status === 'success' && data.results.length > 0 ?
                 data.results.map(obj => (
                     <PeopleSearchDetails
@@ -24,11 +23,11 @@ export const PeopleSearchResults = ({searchText}) => {
                         profile_path={obj.profile_path}
                         known_for={obj.known_for}
                     />
-            ))
+                ))
                 :
-                <div>no {searchText} found...</div>
+                <div id='peopleNotFound'>People Not Found by Name</div>
             }
-            {status === 'success' && <ContentPagination page={page} setPage={setPage} numOfPage={data.total_pages > 500 ? 500 : data.total_pages}/>}
+            {(data?.total_pages > 1) && <ContentPagination page={page} setPage={setPage} numOfPage={data.total_pages > 500 ? 500 : data.total_pages}/>}
         </div>
     )
 }

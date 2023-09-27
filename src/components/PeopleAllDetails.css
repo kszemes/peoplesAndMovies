@@ -1,0 +1,39 @@
+/*.peopleAllDetails{*/
+/*    display: flex!important;*/
+/*    flex-direction:column;*/
+/*    background-color: rgb(58,1,98)!important;*/
+/*    color: white!important;*/
+/*    padding: 10px !important;*/
+/*    margin: 5px!important;*/
+/*    border-radius:5px!important;*/
+/*    position: relative!important;*/
+/*    width: 50%;*/
+/*    height: 100%;*/
+/*}*/
+
+.info{
+    width:100%;
+    display: flex!important;
+    justify-content: space-around!important;
+}
+.peopleAllDetails h3{
+    text-align: center!important;
+    text-transform: uppercase!important;
+}
+.poster{
+    border: 3px solid black;
+    border-radius:5px!important;
+}
+
+.gridContainer {
+    margin-top: 10px;
+}
+
+.gridItem {
+    font-size: 1.5rem;
+}
+
+.typography{
+    margin: 10px!important;
+    border: 2px solid red;
+}

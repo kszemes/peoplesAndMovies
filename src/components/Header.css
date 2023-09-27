@@ -1,9 +1,10 @@
 .header{
   flex: auto;
+  text-decoration: none!important;
   justify-content: center;
   background-color: blue;
   color: white;
-  font-size: 4vw;
+  font-size: 3vw;
   margin:0;
   padding: 0.5rem;
   box-shadow: 0 5px 5px black;

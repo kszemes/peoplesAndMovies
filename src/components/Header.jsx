@@ -1,7 +1,11 @@
 import React from 'react'
 import './Header.css'
+import {NavLink} from "react-router-dom";
+
 export const Header = () => {
     return (
-        <div className="header" onClick={() => window.scrollTo(0, 0)}>👨‍👩‍👧‍👦 Peoples And Movies️ 🎬</div>
+        <NavLink to={`/`} style={{textDecoration: 'none'}}>
+            <div className="header">👨‍👩‍👧‍👦 Peoples And Movies️ 🎬</div>
+        </NavLink>
     )
 }

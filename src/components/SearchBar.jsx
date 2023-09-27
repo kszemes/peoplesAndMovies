@@ -28,21 +28,10 @@ const Search = styled('div')(({theme}) => ({
     },
 }));
 
-const SearchIconWrapper = styled('div')(({theme}) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}));
-
 const StyledInputBase = styled(InputBase)(({theme}) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
         width: '100%',
@@ -62,14 +51,14 @@ export const SearchBar = () => {
         setSearchText(e.target.value)
     }
     return (
-        <>
+        <div>
             <Box sx={{flexGrow: 1}}>
                 <AppBar position="static">
                     <Toolbar sx={{justifyContent: 'center'}}>
                         <Search>
                             <StyledInputBase sx={{minWidth: '350px'}}
                                              autoFocus={true}
-                                             placeholder="PeopleSearchDetails Search…"
+                                             placeholder="Search People"
                                              inputProps={{'aria-label': 'search'}}
                                              onChange={handleChangeText}
                             />
@@ -81,6 +70,6 @@ export const SearchBar = () => {
                 </AppBar>
             </Box>
             {fetchData && <PeopleSearchResults searchText={searchText}/>}
-        </>
+        </div>
     );
 };
