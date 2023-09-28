@@ -1,7 +1,7 @@
 #root {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -50,11 +50,15 @@
 h3{
   text-align: center;
 }
+
+h2 {
+  margin-bottom: 5px!important;
+}
 .content-pagination{
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin: 1rem;
 }
 .content-pagination li button{
   color:blue;

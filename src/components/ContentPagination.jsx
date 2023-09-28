@@ -3,9 +3,8 @@ import React from 'react'
 
 export const ContentPagination = ({page,setPage,numOfPage=10}) => {
     const handleChange=(event,p)=>{
-        console.log('oldal:',p);
         setPage(p);
-        window.scrollTo(0,0)
+        // window.scrollTo(0,0)
     }
 
   return (

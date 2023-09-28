@@ -1,12 +1,11 @@
 import {useState} from "react";
-import {getApiKey, getData, theMovieDBPeopleSearchPrefix} from "../utils/dbUtils.js";
+import {getData, searchPeoplesByName} from "../utils/dbUtils.js";
 import {useQuery} from "react-query";
 import {ContentPagination} from "./ContentPagination.jsx";
 import {PeopleSearchDetails} from "./PeopleSearchDetails.jsx";
 export const PeopleSearchResults = ({searchText}) => {
     const [page, setPage] = useState(1)
-    const urlSearch = `${theMovieDBPeopleSearchPrefix}?api_key=${getApiKey()}&query=${searchText}&page=${page}`
-    const {data, status} = useQuery(['searchedItems', urlSearch], getData)
+    const {data, status} = useQuery(['searchedItems', searchPeoplesByName(searchText,page)], getData);
     return (
         <div className="content" id='PeopleSearchResult'>
             {status === 'success' && data.results.length > 0 ?

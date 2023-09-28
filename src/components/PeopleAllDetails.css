@@ -20,20 +20,21 @@
     text-align: center!important;
     text-transform: uppercase!important;
 }
-.poster{
-    border: 3px solid black;
-    border-radius:5px!important;
-}
 
 .gridContainer {
     margin-top: 10px;
 }
 
 .gridItem {
-    font-size: 1.5rem;
+    margin-top: 10px;
+    font-size: 1.4rem;
 }
 
 .typography{
-    margin: 10px!important;
-    border: 2px solid red;
+    margin: 5px!important;
+    text-align: left;
+}
+
+.moviesList {
+    font-size: 1.1rem;
 }
