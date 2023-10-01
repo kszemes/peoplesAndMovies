@@ -1,0 +1,15 @@
+.carousel-item{
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+    padding:10px;
+}
+.carousel-img{
+    max-width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    margin-bottom:5px;
+}
+.carousel-text{
+    font-size:calc(12px + 1*(100vw - 300px)/(1600 - 300));
+}

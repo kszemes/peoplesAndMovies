@@ -7,8 +7,8 @@ export const PeopleDetails = (people) => {
         {people.people.also_known_as !== "" || people.people.also_known_as !== null &&
             <div>{"Also known as: " + people.people.also_known_as}</div>}
         {people.people.birthday !== null && <div>{"Birthday: " + people.people.birthday}</div>}
-        {people.people.deathday !== null && <div>{"Place of birth: " + people.people.place_of_birth}</div>}
-        {people.people.place_of_birth !== null && <div> {"Death of day: " + people.people.deathday}</div>}
+        {people.people.place_of_birth !== null && <div> {"Place of birth: " + people.people.place_of_birth}</div>}
+        {people.people.deathday !== null && <div>{"Death of day: " + people.people.deathday}</div>}
         {people.people.homepage !== null &&
             <div>
                 <span>Homepage: </span>
